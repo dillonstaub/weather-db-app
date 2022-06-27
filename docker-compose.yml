@@ -1,0 +1,11 @@
+version: "3.9"
+services:
+  weatherapp:
+    build: ./weatherapp/
+    image: python-weatherapp
+    container_name: app_container
+    environment:
+      - OPENWEATHER_API_KEY
+      - WEATHER_DB_URL
+    ports:
+      - "5000:5000"

@@ -1,0 +1,16 @@
+schema {
+    query: Query
+}
+
+type IngestDataResult {
+    ingestionStatus: String!
+}
+
+type ClearTableResult {
+    truncationStatus: String!
+}
+
+type Query {
+    ingestData: IngestDataResult!
+    clearTable: ClearTableResult!
+}
